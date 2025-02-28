@@ -1,6 +1,9 @@
-/* styles.css */
-
-body {
+/* Global Settings */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
@@ -8,6 +11,7 @@ body {
     line-height: 1.6;
   }
   
+  /* Header & Navigation */
   header {
     background: #333;
     color: #fff;
@@ -15,33 +19,6 @@ body {
     text-align: center;
   }
   
-  section {
-    padding: 2rem;
-    margin: 1rem;
-    background: #fff;
-    border-radius: 5px;
-  }
-  
-  section h2 {
-    margin-top: 0;
-  }
-  
-  .project {
-    margin-bottom: 1rem;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background: #333;
-    color: #fff;
-  }
-  /* Dodaj na početak styles.css za glatko skrolanje */
-html {
-    scroll-behavior: smooth;
-  }
-  
-  /* Stilovi za navigacijski meni */
   header nav {
     margin-top: 1rem;
   }
@@ -67,40 +44,21 @@ html {
   header nav ul li a:hover {
     color: #f4f4f4;
   }
-  @media (max-width: 768px) {
-    header nav ul {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    header nav ul li {
-      margin: 10px 0;
-    }
-    
-    section {
-      margin: 1rem;
-      padding: 1rem;
-    }
-  }
-  #backToTop {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
+  
+  /* Main Content Sections */
+  section {
+    padding: 2rem;
+    margin: 1rem;
+    background: #fff;
     border-radius: 5px;
-    cursor: pointer;
-    display: none; /* skriven dok se ne skroluje prema dolje */
-    transition: opacity 0.3s ease;
   }
   
-  #backToTop:hover {
-    background: #555;
+  section h2 {
+    margin-top: 0;
   }
- /* Stilovi za sekciju vještina */
-#skills {
+  
+  /* Skills Section */
+  #skills {
     margin: 2rem 1rem;
   }
   
@@ -125,7 +83,13 @@ html {
     text-align: center;
     white-space: nowrap;
     transition: width 0.4s ease;
-  }   
+  }
+  
+  /* Project Cards */
+  .project {
+    margin-bottom: 1rem;
+  }
+  
   .project-card {
     background: #fff;
     padding: 1rem;
@@ -144,6 +108,8 @@ html {
     color: #333;
     font-weight: bold;
   }
+  
+  /* Contact Form */
   #contact form {
     display: flex;
     flex-direction: column;
@@ -175,4 +141,49 @@ html {
   
   #contact button:hover {
     background: #555;
-  }   
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+  }
+  
+  /* Back-to-Top Button */
+  #backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* skriven dok se ne skroluje prema dolje */
+    transition: opacity 0.3s ease;
+  }
+  
+  #backToTop:hover {
+    background: #555;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    header nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    header nav ul li {
+      margin: 10px 0;
+    }
+    
+    section {
+      margin: 1rem;
+      padding: 1rem;
+    }
+  }
+  
