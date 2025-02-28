@@ -1,5 +1,4 @@
 // script.js
-
 console.log("Portfolio loaded");
 
 // Prikaz gumba "Back to Top" nakon skrolanja
@@ -16,4 +15,12 @@ window.addEventListener("scroll", function() {
   document.getElementById("backToTop").addEventListener("click", function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+
+  // Osnovna validacija i "simulacija" slanja obrasca
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Hvala na poruci, uskoro ću te kontaktirati!");
+    this.reset();
+  });
+  
   

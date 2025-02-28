@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dejan Vučetić - Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMf8G97J/6e1Yy5l6F1bE1YF0G80tN4jP7RTVb/" crossorigin="anonymous">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <!-- Naslovna sekcija -->
@@ -21,29 +24,71 @@
   </header>
 
   <!-- O meni sekcija -->
-  <section id="about">
+  <section id="about" data-aos="fade-up">
     <h2>O meni</h2>
     <p>Ja sam junior web developer s osnovnim znanjem HTML-a, CSS-a, JavaScripta, Reacta i Node.js-a. Cilj mi je postati team leader u web developmentu kroz rad na stvarnim projektima.</p>
+    <section id="skills">
+        <h2>Vještine</h2>
+        
+        <div class="skill">
+          <h3>HTML</h3>
+          <div class="progress">
+            <div class="progress-bar" style="width: 80%;">80%</div>
+          </div>
+        </div>
+        
+        <div class="skill">
+          <h3>CSS</h3>
+          <div class="progress">
+            <div class="progress-bar" style="width: 75%;">75%</div>
+          </div>
+        </div>
+        
+        <div class="skill">
+          <h3>JavaScript</h3>
+          <div class="progress">
+            <div class="progress-bar" style="width: 70%;">70%</div>
+          </div>
+        </div>
+        
+        <div class="skill">
+          <h3>React</h3>
+          <div class="progress">
+            <div class="progress-bar" style="width: 65%;">65%</div>
+          </div>
+        </div>
+      </section>      
   </section>
 
   <!-- Projekti sekcija -->
-  <section id="projects">
+  <section id="projects" data-aos="fade-up">
     <h2>Projekti</h2>
-    <div class="project">
+    
+    <div class="project-card">
       <h3>Projekt 1</h3>
-      <p>Kratki opis projekta.</p>
-      <a href="https://github.com/LoadingPro/projekt1" target="_blank">Pogledaj na GitHub-u</a>
+      <p>Kratki opis projekta s detaljima o tehnologijama koje si koristio.</p>
+      <a href="https://github.com/LoadingPro/projekt1" target="_blank">Pogledaj na GitHub-u <i class="fas fa-external-link-alt"></i></a>
     </div>
-    <!-- Možeš dodati više projekata ovdje -->
+    
+    <!-- Dodaj još kartica po potrebi -->
   </section>
 
   <!-- Kontakt sekcija -->
   <section id="contact">
     <h2>Kontakt</h2>
-    <p>Email: <a href="mailto:dejanvucetic86@gmail.com">dejanvucetic86@gmail.com</a></p>
-    <p>Telefon: +385994434200</p>
-    <p><a href="https://github.com/LoadingPro" target="_blank">GitHub</a></p>
-  </section>
+    <form id="contactForm">
+      <label for="name">Ime:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">Poruka:</label>
+      <textarea id="message" name="message" required></textarea>
+      
+      <button type="submit">Pošalji</button>
+    </form>
+  </section>  
 
   <!-- Footer -->
   <footer>
@@ -52,5 +97,9 @@
 
   <script src="script.js"></script>
   <button id="backToTop" title="Nazad na vrh">↑</button>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
